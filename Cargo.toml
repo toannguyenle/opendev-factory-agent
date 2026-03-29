@@ -1,0 +1,26 @@
+[package]
+name = "factory-agent"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.94"
+description = "Sample factory-floor AI agent built on OpenDev framework crates"
+
+[dependencies]
+# OpenDev framework crates (local path — would be crates.io in production)
+opendev-agents = { path = "../opendev-framework/crates/opendev-agents" }
+opendev-models = { path = "../opendev-framework/crates/opendev-models" }
+opendev-context = { path = "../opendev-framework/crates/opendev-context" }
+opendev-tools-core = { path = "../opendev-framework/crates/opendev-tools-core" }
+opendev-runtime = { path = "../opendev-framework/crates/opendev-runtime" }
+opendev-config = { path = "../opendev-framework/crates/opendev-config" }
+opendev-http = { path = "../opendev-framework/crates/opendev-http" }
+opendev-memory = { path = "../opendev-framework/crates/opendev-memory" }
+opendev-mcp = { path = "../opendev-framework/crates/opendev-mcp" }
+
+# Standard deps
+tokio = { version = "1", features = ["full"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+async-trait = "0.1"
+tracing = "0.1"
+tracing-subscriber = "0.3"
